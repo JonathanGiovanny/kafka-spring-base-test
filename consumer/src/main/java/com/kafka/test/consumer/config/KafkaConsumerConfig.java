@@ -22,6 +22,7 @@ public class KafkaConsumerConfig {
 		configProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
 		configProps.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringSerializer.class);
 		configProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringSerializer.class);
+		configProps.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 		return new DefaultKafkaConsumerFactory<>(configProps);
 	}
 
